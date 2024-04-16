@@ -27,7 +27,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
 
   const filePath = req.file.path;
 
-  res.status(200).json({ imagePath: `http://localhost:8080/${filePath}` });
+  res.status(200).json({ filePath });
 });
 
 app.get("/getData", (req, res) => {
