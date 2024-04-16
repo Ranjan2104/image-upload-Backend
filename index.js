@@ -31,7 +31,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
 });
 
 app.get("/getData", (req, res) => {
-  res.send(200).json({message: "API is Running"});
+  res.status(200).json({message: "API is Running"});
 })
 
 const PORT = 8080;
