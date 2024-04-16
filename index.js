@@ -30,6 +30,10 @@ app.post('/upload', upload.single('image'), (req, res) => {
   res.status(200).json({ imagePath: `http://localhost:8080/${filePath}` });
 });
 
+app.get("/getData", (req, res) => {
+  res.send(200).json({message: "API is Running"});
+})
+
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
